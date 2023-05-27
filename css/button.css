@@ -1,0 +1,42 @@
+button, select, a.button, a.button:visited, input[type="button"]{
+	background: #3355ff;
+	border: 3pt solid #8888ff;
+	color: #88ccff;
+	box-shadow: 0 0.3em #000;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Press Start 2P', sans-serif;
+	font-size: 12pt;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	max-width: 100%;
+}
+.checkbox, input[type="checkbox"]{
+	background: var(--checkbox-bg);
+	border: var(--checkbox-border);
+	color: var(--checkbox-text);
+	box-shadow: 0 0.3em #000;
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	padding: 0.5em 1em;
+}
+.checkbox.checked, input[type="checkbox"]:checked{
+	background: var(--checkbox-bg-checked);
+	border: var(--checkbox-border-checked);
+	color: var(--checkbox-text-checked);
+	box-shadow: none;
+}
+input[type="text"]{
+	color: var(--input-text);
+	box-shadow: 0 0.3em #000;
+	text-shadow: 0.07em 0.1em 0 #000;
+	font-family: 'Press Start 2P', sans-serif;
+	font-size: 12pt;
+	padding: 0.5em 1em;
+	background-color: var(--input-bg);
+	border: var(--input-border);
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
