@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Ferrite+Core+DX&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Deftone+Stylus&display=swap');
+@import url('fonts/FerriteCoreDX-Medium.ttf');
+@import url('fonts/DEFTONE.TTF');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url('button.css');
 :root{
 	/* --color-bg: url('/browse/img/bg.svg'); */
