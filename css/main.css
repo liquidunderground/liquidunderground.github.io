@@ -1,8 +1,20 @@
-@import url('fonts/FerriteCoreDX-Medium.ttf');
-@import url('fonts/DEFTONE.TTF');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url('button.css');
+
+@font-face {
+    font-family: 'Ferrite Core DX';
+	src: url('fonts/FerriteCoreDX-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: 'Deftone Stylus';
+	src: url('fonts/DEFTONE.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 :root{
 	/* --color-bg: url('/browse/img/bg.svg'); */
 	--main-bg: url('../img/bg.svg') rgb(223, 241, 253);
