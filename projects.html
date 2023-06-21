@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Our Projects</title>
+  <style>
+	@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+	button, select, a.button, a.button:visited, input[type="button"]{
+		background: #3355ff;
+		border: 3pt solid #8888ff;
+		color: #88ccff;
+		box-shadow: 0 0.3em #000;
+		cursor: pointer;
+		display: inline-block;
+		font-family: 'Press Start 2P', sans-serif;
+		font-size: 12pt;
+		text-decoration: none;
+		padding: 0.5em 1em;
+		max-width: 100%;
+	}
+	.checkbox, input[type="checkbox"]{
+		background: var(--checkbox-bg);
+		border: var(--checkbox-border);
+		color: var(--checkbox-text);
+		box-shadow: 0 0.3em #000;
+		cursor: pointer;
+		display: inline-block;
+		text-decoration: none;
+		padding: 0.5em 1em;
+	}
+	.checkbox.checked, input[type="checkbox"]:checked{
+		background: var(--checkbox-bg-checked);
+		border: var(--checkbox-border-checked);
+		color: var(--checkbox-text-checked);
+		box-shadow: none;
+	}
+	input[type="text"]{
+		color: var(--input-text);
+		box-shadow: 0 0.3em #000;
+		text-shadow: 0.07em 0.1em 0 #000;
+		font-family: 'Press Start 2P', sans-serif;
+		font-size: 12pt;
+		padding: 0.5em 1em;
+		background-color: var(--input-bg);
+		border: var(--input-border);
+		max-width: 100%;
+		box-sizing: border-box;
+	}
+
+
+	@font-face {
+		font-family: 'Ferrite Core DX';
+		src: url('/css/fonts/FerriteCoreDX-Medium.ttf');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Deftone Stylus';
+		src: url('/css/fonts/DEFTONE.TTF');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+
+	:root{
+		/* --color-bg: url('/browse/img/bg.svg'); */
+		--main-bg: url('/img/bg.svg') rgb(223, 241, 253);
+		--nav-bg: #304a7b9c;
+
+		/* Input elements */
+		--input-bg: #003;
+		--input-text: #ddd;
+		--input-border: 3pt solid #444;
+		--checkbox-bg: #3355ff;
+		--checkbox-text: #88ccff;
+		--checkbox-border: 3pt solid #8888ff;
+		--checkbox-bg-hover: #aaaaff;
+		--checkbox-text-hover: #44f;
+		--checkbox-border-hover: 3pt solid #88f;
+		--checkbox-bg-checked: #72cc5b;
+		--checkbox-text-checked: #8fa;
+		--checkbox-border-checked: 3pt solid #89e572;
+		--checkbox-bg-checked-hover: #aaffaa;
+		--checkbox-text-checked-hover: #89e572;
+		--checkbox-border-checked-hover: 3pt solid #89e572;
+		--progress-bg: #003;
+		--progress-trough: #ccc;
+		--progress-trough-good: #6bde4a;
+		--progress-trough-medium: yellow;
+		--progress-trough-bad: red;
+		--progress-border: 2pt solid #666;
+	}
+
+	@media screen and (prefers-color-scheme: dark){
+		:root{
+			--main-bg: url('/img/bg-dark.svg') rgba(0,0,24, 1);
+			--color-text: white;
+			--nav-bg: #1a2e53ed;
+		}
+	}
+
+	.hidden{ display: none !important; }
+
+	body{
+		color: var(--color-text);
+		background: var(--main-bg);
+		background-size: cover;
+		background-attachment: fixed;
+		font-family: 'Noto Sans', sans-serif;
+		font-size: 16pt;
+	}
+
+	nav{
+		background: var(--nav-bg);
+		padding: 0.5em;
+		display: flex;
+		justify-content: center;
+		gap: 1ex;
+	}
+	nav img{ margin: 0; }
+
+	pre{ font-family: '', monospace; }
+
+	a, a:visited{
+		color: #00abdfff;
+		text-decoration: none;
+	}
+
+	h1,p,pre,img,ul,ol{
+	max-width: min(100%, 60em);
+	margin: 1em auto;
+	display: block;
+	width: max-content;
+	}
+
+	h1,h2,h3{
+	}
+
+	p,h1,h2,h3{
+		text-align: center;
+	}
+
+	h1{
+		text-shadow: 0.07em 0.03em 0 #4957bfff;
+		color: #54d9ffff;
+		font-size: 56pt;
+		font-family: 'Deftone Stylus', sans-serif;
+	}
+	h2{
+		text-shadow: 0.07em 0.1em 0 #00abdfff;
+		color: #54d9ffff;
+		font-size: 32pt;
+		font-family: 'Ferrite Core DX', monospace;
+	}
+
+	table,tr,td{ border: none; }
+
+	table{
+		background: var(--color-table-bg);
+		border-color: var(--color-table-border);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	td,th{ padding: 0.75em; }
+	tr:first-child{ background: var(--color-table-bg-head); }
+	tr:nth-child(2n){ background: var(--color-table-bg2); }
+	@media(any-hover: hover) and (pointer: fine){
+		tr:hover{ background: var(--color-table-bg-hover); }
+		nav{
+			position: sticky;
+			top: 0px;
+		}
+	}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav>
+<a class="button" href="/">Home</a>
+<a class="button" href="/projects.html">Projects</a>
+<a class="button" href="/blog">Blog</a>
+<a href="/feed.rss"><img src="img/rss.png" alt="RSS"></a>
+</nav>
+<header id="title-block-header">
+<h1 class="title">Our Projects</h1>
+<p class="meta"></p>
+<p><a href="https://github.com/liquidunderground/liquidlauncher/"><img
+src="img/liquidlauncher_logo.svg" alt="LiquidLauncher logo" /></a></p>
+<h2 id="liquidlauncher">LiquidLauncher</h2>
+<p><a
+href="https://github.com/liquidunderground/liquidlauncher/">LiquidLauncher</a>
+is a feature-rich launcher for Sonic Robo Blast 2 based on <a
+href="https://github.com/HitCoder9768/LauncherBlast2-reBoot">LauncherBlast2-reBoot
+by HitCoder9768</a>. It’s built to provide wide access to SRB2, it’s
+technology and it’s community right to your fingertips:</p>
+<ul>
+<li>Quickly configure various game settings using game profiles</li>
+<li>Create launch scripts to quickly run and share premade game setups
+independent of any launcher</li>
+<li>Create mod lists to easily include a multitude of mods upon game
+startup</li>
+<li>Explore and download mods from all across the SRB2 community, right
+from within your launcher</li>
+<li>Directly browse and join netgames from any SRB2, SRB2 Kart and/or
+LiquidMS Master Server</li>
+<li>Fetch news from all across the SRB2 and wider Sonic communities
+using our integrated news reader.</li>
+<li>Easily share and download configurations, profiles and launch
+scripts using our <a
+href="%22https://github.com/liquidunderground/configs-public/%22">config
+repository</a></li>
+</ul>
+<p><a href="https://github.com/zibonbadi/liquidms/"><img
+src="img/liquidms_logo.svg" alt="LiquidMS logo" /></a></p>
+<h2 id="liquidms">LiquidMS</h2>
+<p><a href="https://github.com/zibonbadi/liquidms/">LiquidMS</a> is a
+clean room Master Server implementation compatible with Sonic Robo Blast
+2. Here are some of it’s features:</p>
+<ul>
+<li>Rock-solid hosting based on modern web server technology</li>
+<li>Host any kind of network setup imaginable using our thoroughly
+modular, flexible, distributed and resilient architecture</li>
+<li>Mirror any API-compliant master server, both internally as well as
+externally from your node</li>
+<li>Share netgames between multiple LiquidMS nodes, using our custom
+<em>Snitch API</em></li>
+<li>Host a highly polished, blazing fast or even your very own web-based
+server browser right on your LiquidMS node.</li>
+<li>(Future): Host Master servers for Sonic Robo Blast 2 Kart and Sonic
+Robo Blast 2 Legacy using our built-in API support</li>
+</ul>
+<h2 id="liquid-mod-jam">Liquid Mod Jam</h2>
+<p>We are currently seeking modders to participate in our very own
+modding jam, but we’re currently understaffed in modders to host the
+event. Public is better than polished, so we’re still open for it, in
+case you’re interested.</p>
+<p>
+<a class="button" href="https://github.com/liquidunderground">GitHub</a>
+<a class="button" href="https://discord.gg/HVTzVfAWG6/">Discord</a>
+<a class="button" href="https://github.com/liquidunderground/configs-public">Config Repository</a>
+</p>
+<p>
+&copy; 2021-2023 Liquid Underground<br>
+Ferrite Core DX font &copy; Froyo Tam<br>
+Deftone Stylus font &copy; Larabie Fonts
+</p>
+</body>
+</html>

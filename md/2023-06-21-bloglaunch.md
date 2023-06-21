@@ -1,7 +1,7 @@
 ---
 title: Liquid Underground Blog launch
 author: PixL
-pubDate: 2021-08-27 
+pubDate: 2021-08-21
 ...
 
 Hello,
