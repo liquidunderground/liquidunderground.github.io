@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Welcome to Liquid Underground</title>
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+$if(description-meta)$
+  <meta name="description" content="$description-meta$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
   <style>
 	@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
@@ -188,30 +200,15 @@
 <a class="button" href="/blog">Blog</a>
 <a href="/feed.rss"><img src="img/rss.png" alt="RSS"></a>
 </nav>
+$if(title)$
 <header id="title-block-header">
-<h1 class="title">Welcome to Liquid Underground</h1>
-<p class="meta"></p>
-<p><a href="https://github.com/liquidunderground/"><img
-src="img/liquid_logo.svg" alt="Liquid Underground logo" /></a></p>
-<p>Welcome to Liquid Underground. We are a Sonic Robo Blast 2
-subcommunity that seeks to develop software and integrate players into
-an interconnected, easy-to-access network based on distributed
-technology, collaborative development, open sharing, respect for
-independence and a strict focus on solving problems. We adhere to nine
-principles, which we refer to as <em>The Zen of Liquid:</em></p>
-<ol type="1">
-<li>Illegal is out of the question</li>
-<li>Reference is better than ownership</li>
-<li>Useful is better than righteous</li>
-<li>Expression is better than moderation</li>
-<li>Public is better than polished</li>
-<li>The project over the community</li>
-<li>Distributed is better than organised</li>
-<li>Collaboration is better than leadership</li>
-<li>Independence is better than compliance</li>
-</ol>
-<p>You can reach us by <a href="https://discord.gg/HVTzVfAWG6/">joining
-our Discord community.</a>.</p>
+<h1 class="title">$title$</h1>
+$if(subtitle)$
+<p class="subtitle">$subtitle$</p>
+$endif$
+<p class="meta">$if(pubDate)$published on $pubDate$ $endif$$if(author)$by $author$$endif$</p>
+$endif$
+$body$
 <p>
 <a class="button" href="https://github.com/liquidunderground">GitHub</a>
 <a class="button" href="https://discord.gg/HVTzVfAWG6/">Discord</a>

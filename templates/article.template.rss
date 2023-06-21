@@ -1,0 +1,8 @@
+<item>
+<title>$pagetitle$</title>
+<link>$link$</link>
+<author>$author$</author>
+<pubDate>$pubDate$</pubDate>
+$if(description)$<description>$description$</description>$endif$
+<content>$body$</content>
+</item>

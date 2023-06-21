@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<title></title>
+<link>http://liquidunderground.github.io</link>
+
+<language>en-us</language>
+<copyright>Liquid Underground</copyright>
+<managingEditor>Liquid Underground</managingEditor>
+<webMaster>Liquid Underground</webMaster>
+
+<generator>Pandoc -- pandoc.org</generator>
+<item>
+<title>
+Liquid Underground Blog launch
+</title>
+<p><link>http://liquidunderground.github.io/blog/2023-06-21-bloglaunch.html</link>
+<author>PixL</author> <pubDate>2021-08-21</pubDate></p>
+<content>
+<p>
+Hello,
+</p>
+<p>
+As this website seemed rather dormant for such a public outlet of Liquid
+Underground, I’ve decided to put a blog system into here. In short, it’s
+a Makefile-based static site generator based on Pandoc, but for further
+details, I suggest looking at the <a
+href="https://github.com/liquidunderground/liquidunderground.github.io/">website
+repository</a>’s <code>README.md</code>.
+</p>
+<p>
+In order to conveniently relay our news towards <a
+href="https://github.com/liquidunderground/liquidlauncher/">LiquidLauncher</a>,
+it also features an RSS feed at <a
+href="https://liquidunderground.github.io/feed.rss"
+class="uri">https://liquidunderground.github.io/feed.rss</a> which will
+soon be integrated as the launcher’s default news feed.
+</p>
+<p>
+Naturally, in typical LqU manner, I’ve also added instructions on how to
+submit your own articles on here on our <a
+href="https://github.com/liquidunderground/liquidunderground.github.io/">website
+repository</a>. That way, this blog can serve as a central news outlet
+for all the Liquid Underground community wants to share.
+</p>
+<p>
+Thanks<br /> - PixL
+</p>
+<p></content> </item></p>
+</channel>
+</rss>
