@@ -1,0 +1,8 @@
+---
+language: en-us
+link: http://liquidunderground.github.io
+copyright: Liquid Underground
+managingEditor: Liquid Underground
+webMaster: Liquid Underground
+pubDate: \printdate{yyyy-mm-dd} # This is LaTeX, but Pandoc should recognize it nonetheless
+...

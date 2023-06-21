@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<title>$title$</title>
+<link>$link$</link>
+$if(description)$<description>$description$</description>$endif$
+$if(language)$<language>$language$</language>$endif$
+$if(copyright)$<copyright>$copyright$</copyright>$endif$
+$if(managingEditor)$<managingEditor>$managingEditor$</managingEditor>$endif$
+$if(webMaster)$<webMaster>$webMaster$</webMaster>$endif$
+$if(pubDate)$<pubDate>$pubDate$</pubDate>$endif$
+<generator>Pandoc -- pandoc.org</generator>
+$body$
+</channel>
+</rss>
