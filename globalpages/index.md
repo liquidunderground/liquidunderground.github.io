@@ -1,5 +1,5 @@
 ---
-title: Welcome
+title: Welcome to Liquid Underground
 ...
 
 [![Liquid Underground logo](img/liquid_logo.svg)](https://github.com/liquidunderground/)

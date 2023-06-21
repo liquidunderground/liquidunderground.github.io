@@ -14,10 +14,28 @@ Liquid Underground community.
 How to contribute
 -----------------
 
-Fork this repository and add your own Markdown articles to `contrib/`
-before filing a pull request.  
-For sorting purposes, your article's filename shall begin with the date of
-first creation in [ISO8601] syntax, for example
+Liquid Underground is built on it's community and as such, we welcome any
+SRB2 or Liquid-related article you wish to publish here. However, to keep
+things running smoothly, here's some tips on getting your article onto our
+website:
+
+### Forks, Submissions and Pull Requests
+
+It's best to fork this repository for creating your article. After you're
+done, add it to `contrib/` and file a pull request for it to be evaluated. 
+For security and auditing purposes, we only accept pull requests that are
+being merged into `dev`. **DO NOT ATTEMPT TO MERGE AGAINST `main`**
+
+Once you file your pull request, make sure we can verify your affiliation
+and/or membership relating to LqU.  This blog is an outlet for official
+Liquid Underground-related media and as such, we will freely represent our
+community, however we will not accept to host content defined by
+potentially malicious outside sources.
+
+### Filenames and Editing
+
+For keeping things in chronological order, your article's filename shall
+begin with the date of first creation in [ISO8601] syntax, for example:
 
 ```
 <YYYY-MM-DD>_<TITLE>.md
@@ -25,10 +43,23 @@ first creation in [ISO8601] syntax, for example
 
 [ISO8601]: <https://en.wikipedia.org/w/index.php?title=ISO_8601&oldid=1160073691>
 
-The Date of creation is to be specified in [ISO8601] syntaxt, for example
+Please keep in mind that you are not the only one filing a pull request to
+get your article published. Please don't try to be smart by submitting
+ready-made content that's been run through the entire production pipeline
+by you. Publish only the newly added article in raw Markdown form (+all
+necessary assets) within your pull request and let Liquid's site
+administrators handle the heavy lifting.
+
+We also expect you to have quality controlled your article. Things such as
+missing or broken links, commits containing unrelated data and other
+content that doesn't match our quality criteria will not be accepted.
+
+
+### Quality of Content
 
 Articles are written in [Pandoc-style Markdown], with at least the
 following fields in it's front matter (the beginning of the file):
+
 
 ```YAML
 ---
@@ -39,6 +70,12 @@ pubdate: 2021-08-27
 ```
 
 [Pandoc-style Markdown]: <https://boisgera.github.io/pandoc/markdown/>
+
+**Keep your style civil and professional:** Opinion pieces and even columns
+are fine, but make sure to present such content in a manner that makes it
+clear that you are merely expressing your own personal viewpoint. Also be
+aware that with any piece you publish, you represent our community to the
+outside world.
 
 
 Installation
