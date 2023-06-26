@@ -23,17 +23,17 @@ blog:
 globalpages: 
 	-mkdir $@
 
-blog/%.html: md/%.md templates/template.html | blog
-	pandoc $< $(args_pandoc_html) -o $@ 
+blog/%.html: md/%.md templates/template.html $(template_config) | blog
+	pandoc $(template_config) $< $(args_pandoc_html) -o $@ 
 
 # Index page, basically
-%.html: globalpages/%.md templates/template.html | globalpages
-	pandoc $< $(args_pandoc_html) -o $@ 
+%.html: globalpages/%.md templates/template.html $(template_config) | globalpages
+	pandoc $(template_config) $< $(args_pandoc_html) -o $@ 
 
 out_rss/%.rss: md/%.md templates/article.template.rss | out_rss
 	echo -e "---\nbaselink: ${HTTP_BASE}$*.html\nlink: ${HTTP_BASE}/blog/$*.html\n...\n" | \
 	pandoc - $< -f markdown --template templates/article.template.rss -t html -o $@ 
 
-feed.rss: $(shell ls md/*.md | sed "s/md/rss/g" | sed "s/^/out_/") templates/template.rss
+feed.rss: $(shell ls md/*.md | sed "s/md/rss/g" | sed "s/^/out_/") $(template_config) templates/template.rss
 	pandoc $(template_config) out_rss/*.rss --template ./templates/template.rss -t html -o $@ 
 
