@@ -105,6 +105,14 @@ $endif$
 		--progress-trough-medium: yellow;
 		--progress-trough-bad: red;
 		--progress-border: 2pt solid #666;
+		/* Tables */
+		--table-text: #ccc;
+		--table-head-text: yellow;
+		--table-bg: #003d;
+		--table-bg2: #114d;
+		--table-bg-head: #002f;
+		--table-locked-bg: #447d;
+		--table-bg-hover: #335;
 	}
 
 	@media screen and (prefers-color-scheme: dark){
@@ -178,17 +186,23 @@ $endif$
 	table,tr,td{ border: none; }
 
 	table{
-		background: var(--color-table-bg);
-		border-color: var(--color-table-border);
+		background: var(--table-bg);
+		border-color: var(--table-border);
+		color: var(--table-text);
 		margin-left: auto;
 		margin-right: auto;
 	}
+	th{
+		color: var(--table-head-text);
+		font-family: 'Press Start 2P', sans-serif;
+		text-shadow: #000000 0 0.2em;
+	}
 
-	td,th{ padding: 0.75em; }
-	tr:first-child{ background: var(--color-table-bg-head); }
-	tr:nth-child(2n){ background: var(--color-table-bg2); }
+	td,th{ padding: 0.33em; }
+	tr:first-child{ background: var(--table-bg-head); }
+	tr:nth-child(2n){ background: var(--table-bg2); }
 	@media(any-hover: hover) and (pointer: fine){
-		tr:hover{ background: var(--color-table-bg-hover); }
+		tr:hover{ background: var(--table-bg-hover); }
 	}
 	@media(min-width: 40em){
 		nav{
