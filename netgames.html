@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Liquid Underground community netgames</title>
+  <style>
+	@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+	button, select, a.button, a.button:visited, input[type="button"]{
+		background: #3355ff;
+		border: 3pt solid #8888ff;
+		color: #88ccff;
+		box-shadow: 0 0.3em #000;
+		cursor: pointer;
+		display: inline-block;
+		font-family: 'Press Start 2P', sans-serif;
+		font-size: 12pt;
+		text-decoration: none;
+		padding: 0.5em 1em;
+		max-width: 100%;
+	}
+	.checkbox, input[type="checkbox"]{
+		background: var(--checkbox-bg);
+		border: var(--checkbox-border);
+		color: var(--checkbox-text);
+		box-shadow: 0 0.3em #000;
+		cursor: pointer;
+		display: inline-block;
+		text-decoration: none;
+		padding: 0.5em 1em;
+	}
+	.checkbox.checked, input[type="checkbox"]:checked{
+		background: var(--checkbox-bg-checked);
+		border: var(--checkbox-border-checked);
+		color: var(--checkbox-text-checked);
+		box-shadow: none;
+	}
+	input[type="text"]{
+		color: var(--input-text);
+		box-shadow: 0 0.3em #000;
+		text-shadow: 0.07em 0.1em 0 #000;
+		font-family: 'Press Start 2P', sans-serif;
+		font-size: 12pt;
+		padding: 0.5em 1em;
+		background-color: var(--input-bg);
+		border: var(--input-border);
+		max-width: 100%;
+		box-sizing: border-box;
+	}
+
+
+	@font-face {
+		font-family: 'Ferrite Core DX';
+		src: url('/css/fonts/FerriteCoreDX-Medium.ttf');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Deftone Stylus';
+		src: url('/css/fonts/DEFTONE.TTF');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+
+	:root{
+		/* --color-bg: url('/browse/img/bg.svg'); */
+		--main-bg: url('/img/bg.svg') rgb(223, 241, 253);
+		--nav-bg: #304a7b9c;
+
+		/* Input elements */
+		--input-bg: #003;
+		--input-text: #ddd;
+		--input-border: 3pt solid #444;
+		--checkbox-bg: #3355ff;
+		--checkbox-text: #88ccff;
+		--checkbox-border: 3pt solid #8888ff;
+		--checkbox-bg-hover: #aaaaff;
+		--checkbox-text-hover: #44f;
+		--checkbox-border-hover: 3pt solid #88f;
+		--checkbox-bg-checked: #72cc5b;
+		--checkbox-text-checked: #8fa;
+		--checkbox-border-checked: 3pt solid #89e572;
+		--checkbox-bg-checked-hover: #aaffaa;
+		--checkbox-text-checked-hover: #89e572;
+		--checkbox-border-checked-hover: 3pt solid #89e572;
+		--progress-bg: #003;
+		--progress-trough: #ccc;
+		--progress-trough-good: #6bde4a;
+		--progress-trough-medium: yellow;
+		--progress-trough-bad: red;
+		--progress-border: 2pt solid #666;
+		/* Tables */
+		--table-text: #ccc;
+		--table-head-text: yellow;
+		--table-bg: #003d;
+		--table-bg2: #114d;
+		--table-bg-head: #002f;
+		--table-locked-bg: #447d;
+		--table-bg-hover: #335;
+	}
+
+	@media screen and (prefers-color-scheme: dark){
+		:root{
+			--main-bg: url('/img/bg-dark.svg') rgba(0,0,24, 1);
+			--color-text: white;
+			--nav-bg: #1a2e53ed;
+		}
+	}
+
+	.hidden{ display: none !important; }
+
+	body{
+		color: var(--color-text);
+		background: var(--main-bg);
+		background-size: cover;
+		background-attachment: fixed;
+		font-family: 'Noto Sans', sans-serif;
+		font-size: 16pt;
+	}
+
+	main{
+		max-width: 42em;
+		margin: 0 auto;
+	}
+
+	nav{
+		background: var(--nav-bg);
+		padding: 0.5em;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		gap: 1ex;
+	}
+	nav img{ margin: 0; }
+
+	pre{ font-family: '', monospace; }
+
+	a, a:visited{
+		color: #00abdfff;
+		text-decoration: none;
+	}
+
+	h1,p,pre,img,ul,ol{
+	max-width: min(100%, 60em);
+	margin: 1em auto;
+	display: block;
+	width: max-content;
+	}
+
+	h1,h2,h3{
+	}
+
+	p,h1,h2,h3{
+		text-align: center;
+	}
+
+	h1{
+		text-shadow: 0.07em 0.03em 0 #4957bfff;
+		color: #54d9ffff;
+		font-size: 56pt;
+		font-family: 'Deftone Stylus', sans-serif;
+	}
+	h2{
+		text-shadow: 0.07em 0.1em 0 #00abdfff;
+		color: #54d9ffff;
+		font-size: 32pt;
+		font-family: 'Ferrite Core DX', monospace;
+	}
+
+	table,tr,td{ border: none; }
+
+	table{
+		background: var(--table-bg);
+		border-color: var(--table-border);
+		color: var(--table-text);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	th{
+		color: var(--table-head-text);
+		font-family: 'Press Start 2P', sans-serif;
+		text-shadow: #000000 0 0.2em;
+	}
+
+	td,th{ padding: 0.33em; }
+	tr:first-child{ background: var(--table-bg-head); }
+	tr:nth-child(2n){ background: var(--table-bg2); }
+	@media(any-hover: hover) and (pointer: fine){
+		tr:hover{ background: var(--table-bg-hover); }
+	}
+	@media(min-width: 40em){
+		nav{
+			position: sticky;
+			top: 0px;
+		}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav>
+<a class="button" href="/">Home</a>
+<a class="button" href="/projects.html">Projects</a><a class="button" href="/masterservers.html">Master
+Servers</a><a class="button" href="/netgames.html">Netgames</a>
+<a class="button" href="/blog">Blog</a>
+<a href="/feed.rss"><img src="/img/rss.png" alt="RSS"></a>
+</nav>
+<header id="title-block-header">
+<h1 class="title">Liquid Underground community netgames</h1>
+<p class="meta"></p>
+</header>
+<main>
+<p>Looking for an SRB2 server? These are our dedicated community netgame
+partners! If you’d like to be featured or have any other questions, <a
+href="https://discord.gg/HVTzVfAWG6/">join our Discord.</a>.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">IP Address</th>
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Website</th>
+<th style="text-align: center;">Host</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</main>
+<p>
+<a class="button" href="https://github.com/liquidunderground">GitHub</a>
+<a class="button" href="https://discord.gg/HVTzVfAWG6/">Discord</a>
+<a class="button" href="https://github.com/liquidunderground/configs-public">Config Repository</a>
+</p>
+<p>
+&copy; 2021-2023 Liquid Underground<br>
+Ferrite Core DX font &copy; Froyo Tam<br>
+Deftone Stylus font &copy; Larabie Fonts
+</p>
+</body>
+</html>
