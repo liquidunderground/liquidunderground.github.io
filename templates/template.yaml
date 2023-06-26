@@ -5,4 +5,11 @@ copyright: Liquid Underground
 managingEditor: Liquid Underground
 webMaster: Liquid Underground
 pubDate: \printdate{yyyy-mm-dd} # This is LaTeX, but Pandoc should recognize it nonetheless
+navlinks:
+- content: Projects
+  href: /projects.html
+- content: Master Servers
+  href: /masterservers.html
+- content: Netgames
+  href: /netgames.html
 ...

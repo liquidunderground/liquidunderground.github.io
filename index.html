@@ -114,10 +114,16 @@
 		font-size: 16pt;
 	}
 
+	main{
+		max-width: 50em;
+		margin: 0 auto;
+	}
+
 	nav{
 		background: var(--nav-bg);
 		padding: 0.5em;
 		display: flex;
+		flex-flow: row wrap;
 		justify-content: center;
 		gap: 1ex;
 	}
@@ -171,11 +177,12 @@
 	tr:nth-child(2n){ background: var(--color-table-bg2); }
 	@media(any-hover: hover) and (pointer: fine){
 		tr:hover{ background: var(--color-table-bg-hover); }
+	}
+	@media(min-width: 40em){
 		nav{
 			position: sticky;
 			top: 0px;
 		}
-	}
   </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -184,13 +191,16 @@
 <body>
 <nav>
 <a class="button" href="/">Home</a>
-<a class="button" href="/projects.html">Projects</a>
+<a class="button" href="/projects.html">Projects</a><a class="button" href="/masterservers.html">Master
+Servers</a><a class="button" href="/netgames.html">Netgames</a>
 <a class="button" href="/blog">Blog</a>
 <a href="/feed.rss"><img src="/img/rss.png" alt="RSS"></a>
 </nav>
 <header id="title-block-header">
 <h1 class="title">Welcome to Liquid Underground</h1>
 <p class="meta"></p>
+</header>
+<main>
 <p><a href="https://github.com/liquidunderground/"><img
 src="img/liquid_logo.svg" alt="Liquid Underground logo" /></a></p>
 <p>Welcome to Liquid Underground. We are a Sonic Robo Blast 2
@@ -212,6 +222,7 @@ principles, which we refer to as <em>The Zen of Liquid:</em></p>
 </ol>
 <p>You can reach us by <a href="https://discord.gg/HVTzVfAWG6/">joining
 our Discord community.</a>.</p>
+</main>
 <p>
 <a class="button" href="https://github.com/liquidunderground">GitHub</a>
 <a class="button" href="https://discord.gg/HVTzVfAWG6/">Discord</a>

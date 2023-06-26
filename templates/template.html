@@ -126,10 +126,16 @@ $endif$
 		font-size: 16pt;
 	}
 
+	main{
+		max-width: 42em;
+		margin: 0 auto;
+	}
+
 	nav{
 		background: var(--nav-bg);
 		padding: 0.5em;
 		display: flex;
+		flex-flow: row wrap;
 		justify-content: center;
 		gap: 1ex;
 	}
@@ -183,11 +189,12 @@ $endif$
 	tr:nth-child(2n){ background: var(--color-table-bg2); }
 	@media(any-hover: hover) and (pointer: fine){
 		tr:hover{ background: var(--color-table-bg-hover); }
+	}
+	@media(min-width: 40em){
 		nav{
 			position: sticky;
 			top: 0px;
 		}
-	}
   </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -196,7 +203,7 @@ $endif$
 <body>
 <nav>
 <a class="button" href="/">Home</a>
-<a class="button" href="/projects.html">Projects</a>
+$for(navlinks)$<a class="button" href="$navlinks.href$">$navlinks.content$</a>$endfor$
 <a class="button" href="/blog">Blog</a>
 <a href="/feed.rss"><img src="/img/rss.png" alt="RSS"></a>
 </nav>
@@ -207,8 +214,11 @@ $if(subtitle)$
 <p class="subtitle">$subtitle$</p>
 $endif$
 <p class="meta">$if(pubDate)$published on $pubDate$ $endif$$if(author)$by $author$$endif$</p>
+</header>
 $endif$
+<main>
 $body$
+</main>
 <p>
 <a class="button" href="https://github.com/liquidunderground">GitHub</a>
 <a class="button" href="https://discord.gg/HVTzVfAWG6/">Discord</a>
