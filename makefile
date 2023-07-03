@@ -35,5 +35,5 @@ out_rss/%.rss: md/%.md templates/article.template.rss | out_rss
 	pandoc - $< -f markdown --template templates/article.template.rss -t html -o $@ 
 
 feed.rss: $(shell ls md/*.md | sed "s/md/rss/g" | sed "s/^/out_/") $(template_config) templates/template.rss
-	pandoc $(template_config) out_rss/*.rss --template ./templates/template.rss -t html -o $@ 
+	pandoc $(template_config) $(shell ls out_rss/*.rss | sort -rn) --template ./templates/template.rss -t html -o $@ 
 

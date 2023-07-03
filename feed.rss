@@ -12,9 +12,132 @@
 <generator>Pandoc -- pandoc.org</generator>
 <item>
 <title>
+LiquidLauncher v1.0 released
+</title>
+<p><link>http://liquidunderground.github.io/blog/20230701-liquidlauncher-v1-released.html</link>
+<author>PixL</author> <pubDate>2023-07-01</pubDate></p>
+<content>
+<p>
+At last, <a
+href="https://github.com/liquidunderground/liquidlauncher/">LiquidLauncher</a>
+finally reached it’s first full version, <code>v1.0</code>. This update
+now features both new extension as well as restored old ones, such as
+the ability to download mods from within the launcher. Here’s a quick
+rundown of the changes
+</p>
+<h3 id="added-functionality">
+Added functionality
+</h3>
+<ul>
+<li>
+Support for Skybase and Gamebanana added
+</li>
+<li>
+Support for custom Skins and Colors added
+</li>
+<li>
+SRB2 Flatpak support
+</li>
+<li>
+Added a ridiculous amount of game config options
+<ul>
+<li>
+Dedicated Battlemod support
+</li>
+</ul>
+</li>
+<li>
+Implemented MS-agnostic room queries
+</li>
+<li>
+Fixed mod downloading
+</li>
+<li>
+Added developer options
+</li>
+<li>
+Added snitch button
+</li>
+<li>
+Implemented multi-row operations for netgame/MS tables
+</li>
+</ul>
+<h3 id="quality-of-life">
+Quality-of-Life
+</h3>
+<ul>
+<li>
+Icons added to game view menu and mod list to distinguish between
+modsources
+</li>
+<li>
+Changed Master Server API setting to comboboxes
+</li>
+<li>
+Migrated config formats to TOML
+</li>
+<li>
+Asynchronization of most queries
+</li>
+<li>
+Games are now launched as separate processes
+</li>
+<li>
+Lots of error text and microprint to get started
+</li>
+</ul>
+<p>
+Aside from tons of new features and other quality-of-life improvements,
+LiquidLauncher now also integrates neatly into our emerging
+infrastructure such as our newsfeed and our most popular LiquidMS nodes
+such that you can now conveniently access the Underground right from
+within LiquidLauncher.
+</p>
+<p>
+Check out our GitHub release at the link below.
+</p>
+<p>
+<a
+href="https://github.com/liquidunderground/liquidlauncher/releases/tag/v1.0"
+class="uri">https://github.com/liquidunderground/liquidlauncher/releases/tag/v1.0</a>
+</p>
+<p></content> </item></p>
+<item>
+<title>
+Master Servers and Netgames pages introduction
+</title>
+<p><link>http://liquidunderground.github.io/blog/20230627-masterservers-and-netgames-introduced.html</link>
+<author>PixL</author> <pubDate>2023-06-27</pubDate></p>
+<content>
+<p>
+Liquid Underground’s website now features a dedicated <a
+href="https://liquidunderground.github.io/masterservers.html">Master
+Servers</a> page! No more sifting through the <code>#featured</code>
+channel on Discord and no more need to join our Discord to find out
+about what LiquidMS nodes are available to use. As of now, this page is
+manually maintained by me and requires either a pull request or a plain
+old verbal request towards me for your new nodes to be listed, but I
+still hope that this archive will be useful to everyone interested in
+utilizing LiquidMS, especially our players.
+</p>
+<p>
+Furthermore, we’ve also launched a <a
+href="https://liquidunderground.github.io/netgames.html">Netgames</a>
+page to let netgame hosts officially advertise their affiliation with
+Liquid Underground and be discovered both by and through our community.
+Once again, simply file a pull request or ask for your netgame to be
+added to the list, featuring all information necessary for the table on
+the site.
+</p>
+<p>
+Thank you for reading<br /> - PixL
+</p>
+<p></content> </item></p>
+<item>
+<title>
 Liquid Underground Blog launch
 </title>
-<p><link>http://liquidunderground.github.io/blog/2023-06-21-bloglaunch.html</link>
+<p><link>http://liquidunderground.github.io/blog/20230621-bloglaunch.html</link>
 <author>PixL</author> <pubDate>2023-06-21</pubDate></p>
 <content>
 <p>
@@ -45,37 +168,6 @@ for all the Liquid Underground community wants to share.
 </p>
 <p>
 Thanks<br /> - PixL
-</p>
-<p></content> </item></p>
-<item>
-<title>
-Master Servers and Netgames pages introduction
-</title>
-<p><link>http://liquidunderground.github.io/blog/2023-06-27-masterservers-and-netgames-introduced.html</link>
-<author>PixL</author> <pubDate>2023-06-27</pubDate></p>
-<content>
-<p>
-Liquid Underground’s website now features a dedicated <a
-href="https://liquidunderground.github.io/masterservers.html">Master
-Servers</a> page! No more sifting through the <code>#featured</code>
-channel on Discord and no more need to join our Discord to find out
-about what LiquidMS nodes are available to use. As of now, this page is
-manually maintained by me and requires either a pull request or a plain
-old verbal request towards me for your new nodes to be listed, but I
-still hope that this archive will be useful to everyone interested in
-utilizing LiquidMS, especially our players.
-</p>
-<p>
-Furthermore, we’ve also launched a <a
-href="https://liquidunderground.github.io/netgames.html">Netgames</a>
-page to let netgame hosts officially advertise their affiliation with
-Liquid Underground and be discovered both by and through our community.
-Once again, simply file a pull request or ask for your netgame to be
-added to the list, featuring all information necessary for the table on
-the site.
-</p>
-<p>
-Thank you for reading<br /> - PixL
 </p>
 <p></content> </item></p>
 </channel>
