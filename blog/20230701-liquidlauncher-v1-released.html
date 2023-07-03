@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Blog overview</title>
+  <meta name="author" content="PixL" />
+  <title>LiquidLauncher v1.0 released</title>
   <style>
 	@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
@@ -211,20 +212,50 @@ Servers</a><a class="button" href="/netgames.html">Netgames</a>
 <a href="/feed.rss"><img src="/img/icons/rss.png" alt="RSS"></a>
 </nav>
 <header id="title-block-header">
-<h1 class="title">Blog overview</h1>
-<p class="meta"></p>
+<h1 class="title">LiquidLauncher v1.0 released</h1>
+<p class="meta">published on 2023-07-01 by PixL</p>
 </header>
 <main>
+<p>At last, <a
+href="https://github.com/liquidunderground/liquidlauncher/">LiquidLauncher</a>
+finally reached it’s first full version, <code>v1.0</code>. This update
+now features both new extension as well as restored old ones, such as
+the ability to download mods from within the launcher. Here’s a quick
+rundown of the changes</p>
+<h3 id="added-functionality">Added functionality</h3>
 <ul>
-<li>2023-07-01: <a
-href="blog/20230701-liquidlauncher-v1-released.html">LiquidLauncher v1.0
-released</a> by PixL</li>
-<li>2023-06-27: <a
-href="blog/20230627-masterservers-and-netgames-introduced.html">Master
-Servers and Netgames pages introduction</a> by PixL</li>
-<li>2023-06-21: <a href="blog/20230621-bloglaunch.html">Liquid
-Underground Blog launch</a> by PixL</li>
+<li>Support for Skybase and Gamebanana added</li>
+<li>Support for custom Skins and Colors added</li>
+<li>SRB2 Flatpak support</li>
+<li>Added a ridiculous amount of game config options
+<ul>
+<li>Dedicated Battlemod support</li>
+</ul></li>
+<li>Implemented MS-agnostic room queries</li>
+<li>Fixed mod downloading</li>
+<li>Added developer options</li>
+<li>Added snitch button</li>
+<li>Implemented multi-row operations for netgame/MS tables</li>
 </ul>
+<h3 id="quality-of-life">Quality-of-Life</h3>
+<ul>
+<li>Icons added to game view menu and mod list to distinguish between
+modsources</li>
+<li>Changed Master Server API setting to comboboxes</li>
+<li>Migrated config formats to TOML</li>
+<li>Asynchronization of most queries</li>
+<li>Games are now launched as separate processes</li>
+<li>Lots of error text and microprint to get started</li>
+</ul>
+<p>Aside from tons of new features and other quality-of-life
+improvements, LiquidLauncher now also integrates neatly into our
+emerging infrastructure such as our newsfeed and our most popular
+LiquidMS nodes such that you can now conveniently access the Underground
+right from within LiquidLauncher.</p>
+<p>Check out our GitHub release at the link below.</p>
+<p><a
+href="https://github.com/liquidunderground/liquidlauncher/releases/tag/v1.0"
+class="uri">https://github.com/liquidunderground/liquidlauncher/releases/tag/v1.0</a></p>
 </main>
 <p>
 <a class="button" href="https://github.com/liquidunderground">GitHub</a>
